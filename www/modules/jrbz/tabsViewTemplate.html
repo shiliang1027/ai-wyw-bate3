@@ -1,0 +1,143 @@
+<% if(type == 50){%>
+<div class='clearfix' id='div50'>
+    <div class='clearfix'>
+        <div id='type1' style='width: 100%;height:280px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span1' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['32'].timeshow%>移动网全天业务量<br>
+                    2G话务量为<%=objs['32']['2G']%>ERL,比平时增长<%=objs['32']['2G_RATE']%>;<br>
+                    3G话务量为<%=objs['32']['3G']%>ERL,比平时增长<%=objs['32']['3G_RATE']%>;
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type2' style='width: 100%;height:300px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span2' style='width:100%;display:block;text-align:left;'>
+                    <%=objs['33'].timeshow%>移动网忙时业务量<br>
+                    2G用户数为<%=objs['33']['2G_USER']%>户,比平时增长<%=objs['33']['2G_USER_RATE']%><br>
+                    3G用户数为<%=objs['33']['3G_USER']%>户,比平时增长<%=objs['33']['3G_USER_RATE']%><br>
+                    4G用户数为<%=objs['33']['4G_USER']%>户,比平时增长<%=objs['33']['4G_USER_RATE']%><br>
+                    2G话务量为<%=objs['33']['2G_HUAWU']%>ERL,比平时增长<%=objs['33']['2G_HUAWU_RATE']%>;<br>
+                    3G话务量为<%=objs['33']['3G_HUAWU']%>ERL,比平时增长<%=objs['33']['3G_HUAWU_RATE']%>;<br>
+                    2G流量为<%=objs['33']['2G_LIU']%>GB,比平时增长<%=objs['33']['2G_LIU_RATE']%>;<br>
+                    3G流量为<%=objs['33']['3G_LIU']%>GB,比平时增长<%=objs['33']['3G_LIU_RATE']%>;<br>
+                    4G流量为<%=objs['33']['4G_LIU']%>GB,比平时增长<%=objs['33']['4G_LIU_RATE']%>;
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type3' style='width:100%;height:280px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span3' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['34'].timeshow%>移动网负荷<br>
+                    QDMSS2 VLR利用率最高为<%=objs['34']['COREVLR']%>%,<br>
+                    LYMSS2 CPU负荷最高为<%=objs['34']['CORESERVERCPU']%>%;
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<% }else if(type == 51){%>
+<div class='clearfix' id='div51'>
+    <div class='clearfix'>
+        <div id='type4' style='width: 100%;height:340px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span4' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['35'].timeshow%>互联网在线用户及占比<br>
+                                                                       在线用户数为<%=objs['35']['ONLINE_NUM_20G']%>户,比平时增长<%=objs['35']['ONLINE_RATE']%>;<br>
+                                                                       在线用户占比为<%=objs['35']['USER_ONLINE_RATE_20G']%>%;
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type5' style='width: 100%;height:340px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span5' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['36'].timeshow%>城域网出向流量业务占比
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type6' style='width: 100%;height:380px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span6' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['37'].timeshow%>互联网网站日访问量<br>
+                                                                       前三的为<%=objs['37'].y[objs['37'].y.length - 1]%>,<%=objs['37'].y[objs['37'].y.length - 2]%>,<%=objs['37'].y[objs['37'].y.length - 3]%>;
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type7' style='width: 100%;height:280px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span7' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['38'].timeshow%>互联网负荷<br>
+                                                                       流入峰值利用率为<%=objs['38']['INBAND']%>%,流出峰值利用率为<%=objs['38']['OUTBAND']%>%;
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<% }else if(type == 52){%>
+<div class='clearfix' id='div52'>
+    <div class='clearfix'>
+        <div id='type8' style='width: 100%;height:320px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span8' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['39'].timeshow%>高铁动车<br>
+                    2G话务量为<%=objs['39']['2G_HUAWU']%>ERL,比平时增长<%=objs['39']['2G_HUAWU_RATE']%>;<br>
+                    3G话务量为<%=objs['39']['3G_HUAWU']%>ERL,比平时增长<%=objs['39']['3G_HUAWU_RATE']%>;<br>
+                    2G流量为<%=objs['39']['2G_LIU']%>GB,比平时增长<%=objs['39']['2G_LIURATE']%>;<br>
+                    3G流量为<%=objs['39']['3G_LIU']%>GB,比平时增长<%=objs['39']['3G_LIU_RATE']%>;
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class='clearfix'>
+        <div id='type9' style='width: 100%;height:280px;'></div>
+    </div>
+    <div class='amount_main holiday_main clearfix'>
+        <ul>
+            <li>
+                <span id='span9' style='width:100%;display:block;text-align: left;'>
+                    <%=objs['40'].timeshow%>交通枢纽<br>
+                    2G话务量为<%=objs['40']['2G_HUAWU']%>ERL,比平时增长<%=objs['40']['2G_HUAWU_RATE']%>;<br>
+                    3G话务量为<%=objs['40']['3G_HUAWU']%>ERL,比平时增长<%=objs['40']['3G_HUAWU_RATE']%>;<br>
+                    2G流量为<%=objs['40']['2G_LIU']%>GB,比平时增长<%=objs['40']['2G_LIU_RATE']%>;<br>
+                    3G流量为<%=objs['40']['3G_LIU']%>GB,比平时增长<%=objs['40']['3G_LIU_RATE']%>;
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<%}%>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="..">
+	<target name="pkgwww">
+   <echo message="============= portal-pkgwww-start ==============" />
+  	 <echo message="Cordova 工程当前目录:${basedir}" />
+	
+	<!--
+	<echo message="压缩js文件:${basedir}/platforms/android/assets/www" />
+	<exec dir="${basedir}" executable="cmd.exe" >      
+		<arg line="/c ${basedir}/hook_scripts/GC_jscompiler.bat" />   
+		<arg line="/c exit" />   
+	</exec> 
+	-->
+
+    <echo message="打包:platforms/android/assets/www" />
+  	 <zip destfile="${basedir}/platforms/android/assets/www.zip">
+        <fileset dir="${basedir}/platforms/android/assets/">
+        	<include name="www/**"/>
+        </fileset>
+     </zip>
+	
+	<echo message="生成MD5文件:platforms/android/assets/www" />
+     <delete dir="${basedir}/www_pkg" />
+	 <copy todir="${basedir}/www_pkg" encoding="UTF-8"  outputencoding ="UTF-8">
+           <fileset dir="${basedir}/platforms/android/assets/www">
+              <exclude name="**/.idea/" />
+              <exclude name="www.md5" />
+          </fileset>
+     </copy>	
+     <java fork="true" failonerror="yes" classname="com.ailk.module.portal.util.MD5File">
+     		<classpath path="${basedir}/hook_scripts/mkmd5.jar"></classpath>
+      	<arg line="${basedir}/www_pkg"/><arg line="${basedir}/platforms/android/assets/www.md5"/>
+     </java>
+     <copy todir="${basedir}/www" encoding="UTF-8"  outputencoding ="UTF-8">
+           <fileset dir="${basedir}/platforms/android/assets/">
+               <include name="www.md5" />
+           </fileset>
+     </copy>
+     <!--<delete dir="${basedir}/platforms/android/assets/www" />-->
+     <delete dir="${basedir}/www_pkg" />
+	 <echo message="============= portal-pkgwww-end ==============" />
+	</target>
+	<target name="pkgwww_ios">
+   <echo message="============= portal-pkgwww-start ==============" />
+  	 <echo message="Cordova 工程当前目录:${basedir}" />
+  	 <echo message="压缩:${basedir}/platforms/android/assets/www" />
+  	 <delete dir="${basedir}/www_pkg" />
+		 <copy todir="${basedir}/www_pkg" encoding="UTF-8"  outputencoding ="UTF-8">
+           <fileset dir="${basedir}/www">
+              <exclude name="**/.idea/" />
+          </fileset>
+     </copy>
+  	
+     <java fork="true" failonerror="yes" classname="com.ailk.module.portal.util.MD5File">
+     		<classpath path="${basedir}/hook_scripts/mkmd5.jar"></classpath>
+      	<arg line="${basedir}/www_pkg"/><arg line="${basedir}/platforms/ios/www.md5"/>
+     </java>
+     <delete dir="${basedir}/www_pkg" />
+	 <echo message="============= portal-pkgwww-end ==============" />
+	</target>
+</project>
+

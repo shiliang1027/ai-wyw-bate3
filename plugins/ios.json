@@ -1,0 +1,82 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "com.ailk.portal.plugin.otherauth": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        }
+    },
+    "dependent_plugins": {
+        "org.apache.cordova.activity-indicator": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "com.hutchind.cordova.plugins.streamingmedia": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        },
+        "org.apache.cordova.media-capture": {
+            "PACKAGE_NAME": "com.ai.wyw"
+        }
+    }
+}

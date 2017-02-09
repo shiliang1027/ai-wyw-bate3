@@ -1,0 +1,54 @@
+<div data-role="content" id="changePasswordPage">
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="back_btn" data-rel="back"></a>修改密码
+    </header>
+    <div class="content">
+        <div class="main">
+            <form method="post" id="changePwdform">
+                <table class="tab_main" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>用户帐号</td>
+                        <td>
+                        <input id="usercode" readonly="readonly" name="userInfo.code" class="px"  type="text" data-role="none">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>原密码</td>
+                        <td>
+                        <input id="userPassword" class="px" value="" placeholder="输入原密码" type="password" data-role="none">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>新密码</td>
+                        <td>
+                        <input id="newPwd" name="userInfo.pass" class="px" value="" placeholder="输入新密码" type="password" data-role="none">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认新密码</td>
+                        <td>
+                        <input id="msNewPassword"  class="px" value="" placeholder="再次输入新密码" type="password" data-role="none">
+                        </td>
+                    </tr>
+                </table>
+                <a id="changePassword" class="testing_btn">确认修改</a>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a class="home"  href="#modules/home/home/goModule"> <p></p> 首页</a>
+            </li>
+            <li>
+                <a class="dy"  href="#modules/subscribe/subscribe/goModule"> <p></p> 订阅</a>
+            </li>
+            <li>
+                <a class="zs"  href="#modules/helper/helper/goModule"> <p></p> 助手</a>
+            </li>
+            <li>
+                <a class="me_hover"  href="#modules/my/my/goModule"> <p></p> 我的</a>
+            </li>
+        </ul>
+    </footer>
+</div>

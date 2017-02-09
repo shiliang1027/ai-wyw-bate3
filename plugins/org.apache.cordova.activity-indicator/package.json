@@ -1,0 +1,12 @@
+package.json:
+{
+    "version": "0.0.1",
+    "name": "com.ailk.portal.plugin.activity-indicator",
+    "cordova_name": "activityIndicator",
+    "description": "activityIndicator",
+    "license": "",
+    "platforms": [
+        "android",
+        "ios"
+    ]
+}

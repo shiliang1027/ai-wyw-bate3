@@ -1,0 +1,75 @@
+<div data-role=content>
+    <header class="header">
+        <img style="margin-top:5%" src="images/logo.png" height="40%"  alt=""/>
+    </header>
+    <div class="pull_content" id="home_content">
+        <div class="pull_main">
+            <!--<div id="scroller-pullDown">-->
+                <!--<span id="down-icon" class="glyphicon glyphicon-refresh pull-down-icon reverse_icon"></span>-->
+                <!--<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>-->
+            <!--</div>-->
+            <div class="clearfix">
+                <div id="wrapper">
+                    <div style="width: 100%;height: 200px;">
+
+                         <div id="chartDiv0" style="width: 100%;height:200px;position: absolute;"></div>
+                         <div id="chartDiv1" style="width: 100%;height:200px;position: absolute;left:100%;"></div>
+                        <div id="chartDiv2" style="width: 100%;height:200px;position: absolute;left:100%;"></div>
+                         <div id="chartDiv3" style="width: 100%;height:200px;position: absolute;left:100%;"></div>
+
+                    </div>
+                    <img id="up" src="images/ico_left2.png" style="position: relative;left: 30%;width: 50px;"/>
+                    <img id="down" src="images/ico_right1.png" style="position: absolute;right: 30%;width: 50px;"/>
+                </div>
+                <!--<div id="indicator">-->
+                    <!--<div id="dotty"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="clearfix">
+                <table class="index_tab" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <% var col = 4; %>
+                    <% for (var r = 0;r < Math.ceil(menus.length/col); r++) { %>
+                    <tr>
+                        <% var len = (menus.length-r*col) < col?(menus.length-r*col):col %>
+                        <% for (var i = 0;i < len; i++) { %>
+                        <% var menu=menus[i+r*col]; %>
+                        <td><div class="index_app"><a href="#modules/<%= menu.code %>/<%= menu.code %>/goModule"><img src="images/<%= menu.icon %>" alt=""/>
+                            <p><%= menu.name %></p>
+                            <% if(menu.state==1) { %>
+                            <div class="app_new"></div>
+                            <% } %>
+                        </a> </div></td>
+                        <% } %>
+                        <% if(r==Math.ceil(menus.length/col)-1) { %>
+                        <td><div class="index_app"><a href="#modules/menus/menulist/goModule"><img src="images/add_pic.png" alt=""/>
+                            <p>添加</p>
+                        </a> </div></td>
+                        <td>&nbsp;</td>
+                        <% } %>
+                    </tr>
+                    <% } %>
+                </table>
+            </div>
+            <!--<div id="scroller-pullUp" style="display: none">-->
+                <!--<span id="up-icon" class="icon-double-angle-up pull-up-icon"></span>-->
+                <!--<span id="pullUp-msg" class="pull-up-msg">上拉刷新</span>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a class="home_hover"  href="#modules/home/home/goModule">
+                <p></p>
+                首页</a></li>
+            <li><a class="dy"  href="#modules/subscribe/subscribe/goModule">
+                <p></p>
+                订阅</a></li>
+            <li><a class="zs"  href="#modules/helper/helper/goModule">
+                <p></p>
+                助手</a></li>
+            <li><a class="me"  href="#modules/my/my/goModule">
+                <p></p>
+                我的</a></li>
+        </ul>
+    </footer>
+</div>

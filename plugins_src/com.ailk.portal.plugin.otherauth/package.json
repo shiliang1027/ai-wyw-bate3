@@ -1,0 +1,12 @@
+package.json:
+{
+    "version": "0.0.1",
+    "name": "com.ailk.portal.plugin.otherauth",
+    "cordova_name": "otherauth",
+    "description": "otherauth load",
+    "license": "",
+    "platforms": [
+        "android",
+        "ios"
+    ]
+}

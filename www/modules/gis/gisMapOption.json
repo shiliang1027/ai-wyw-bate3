@@ -1,0 +1,406 @@
+{
+    "tooltip": {
+        "trigger": "axis",
+        "formatter": "{b}:{c}"
+    },
+    "dataRange": {
+        "x": "left",
+        "y": "bottom",
+        "splitList": [
+            {
+                "start": 51
+            },
+            {
+                "start": 11,
+                "end": 50
+            },
+            {
+                "start": 0,
+                "end": 10
+            }
+        ],
+        "color": [
+            "red",
+            "orange",
+            "green"
+        ]
+    },
+    "series": [
+        {
+            "name": "",
+            "type": "map",
+            "mapType": "山东",
+            "hoverable": true,
+            "itemStyle": {
+                "normal": {
+                    "borderColor": "white",
+                    "color": "#77c5a9",
+                    "label": {
+                        "show": false
+                    }
+                },
+                "emphasis": {
+                    "borderColor": "white",
+                    "color": "#6fbab3",
+                    "label": {
+                        "show": true
+                    }
+                }
+            },
+            "data": [
+                {"name":"济南市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#fbefa1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }  },
+                {"name":"青岛市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#fbefa1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"烟台市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#c6e5d1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"临沂市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#fbefa1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"潍坊市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#f0c9cb",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"菏泽市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#c6e5d1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"济宁市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#d9daee",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"德州市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#def0e7",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"滨州市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#e9bedb",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"聊城市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#c6e5d1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                } },
+                {"name":"东营市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#def0e7",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"泰安市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#e9bedb",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"威海市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#f0c9cb",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"日照市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#f0c9cb",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"淄博市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#fbefa1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"枣庄市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#f0efc1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }},
+                {"name":"莱芜市","itemStyle": {
+                    "normal": {
+                        "borderColor": "white",
+                        "color": "#c6e5d1",
+                        "label": {
+                            "show": false
+                        }
+                    },
+                    "emphasis": {
+                        "borderColor": "white",
+                        "color": "#6fbab3",
+                        "label": {
+                            "show": true
+                        }
+                    }
+                }}
+            ],
+            "geoCoord": {
+                "济南市": [
+                    117.1582,
+                    36.8701
+                ],
+                "青岛市": [
+                    120.4651,
+                    36.3373
+                ],
+                "烟台市": [
+                    120.7397,
+                    37.5128
+                ],
+                "临沂市": [
+                    118.3118,
+                    35.2936
+                ],
+                "潍坊市": [
+                    119.0918,
+                    36.524
+                ],
+                "菏泽市": [
+                    115.6201,
+                    35.2057
+                ],
+                "济宁市": [
+                    116.8286,
+                    35.3375
+                ],
+                "德州市": [
+                    116.6858,
+                    37.2107
+                ],
+                "滨州市": [
+                    117.8174,
+                    37.4963
+                ],
+                "聊城市": [
+                    115.9167,
+                    36.4032
+                ],
+                "东营市": [
+                    118.7073,
+                    37.5513
+                ],
+                "泰安市": [
+                    117.0264,
+                    36.0516
+                ],
+                "威海市": [
+                    121.9482,
+                    37.1393
+                ],
+                "日照市": [
+                    119.2786,
+                    35.5023
+                ],
+                "淄博市": [
+                    118.0371,
+                    36.6064
+                ],
+                "枣庄市": [
+                    117.323,
+                    34.8926
+                ],
+                "莱芜市": [
+                    117.6526,
+                    36.2714
+                ]
+            },
+            "markPoint": {
+                "symbolSize": 10,
+                "borderWidth": 2,
+                "itemStyle": {
+                    "normal": {
+                        "color": "#D60000"
+                    }
+                },
+                "data": []
+            }
+        }
+    ]
+}

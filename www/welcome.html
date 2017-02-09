@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' http://res.wx.qq.com http://api.map.baidu.com/ http://api0.map.bdimg.com/ http://119.188.188.230:28888/ http://119.188.188.230:18888/ http://211.103.0.254:8888/ https://static.arcgis.com/ http://loc.map.baidu.com/ http://online0.map.bdimg.com/ http://online1.map.bdimg.com/ http://online2.map.bdimg.com/ http://online3.map.bdimg.com/ 'unsafe-inline' 'unsafe-eval'">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <!--
+Apple-Specific Meta Tag Keys
+https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW2
+minimal-ui
+-->
+    <!-- // Safari iOS apps only -->
+    <!-- Sets whether a web application runs in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Sets the style of the status bar for a web application -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- // Chrome for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="cordova.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+
+    <style>
+        body {
+            background: url(images/login_bg.jpg) no-repeat #eaf3f8;
+            background-size: 100%
+        }
+    </style>
+</head>
+<body>
+<script src="js/libs/require/require.min.js" data-main="js/main" defer="defer"></script>
+</body>
+</html>

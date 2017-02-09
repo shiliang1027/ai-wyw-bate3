@@ -1,0 +1,77 @@
+<div data-role=content>
+    <header class="header"><a href="javascript:history.go(-1)" class="back_btn"></a>KPI指数详情</header>
+    <div class="content">
+        <div class="top_info"><%= kpi.kpiName %></div>
+        <ul class="view_tab clearfix">
+            <li id="dateView" class="<%= timeType==1?'on':'' %>">日视图</li>
+            <li id="weekView" class="<%= timeType==2?'on':'' %>">周视图</li>
+            <li id="monthView" class="<%= timeType==3?'on':'' %>">月视图</li>
+        </ul>
+        <div class="view_tab_content clearfix">
+            <% for (var i = 0;i < kpiTimeDatas.length; i++) { %>
+            <% var time=timeType==1?kpiTimeDatas[i].date:timeType==2?kpiTimeDatas[i].week:kpiTimeDatas[i].month; %>
+            <% for (var j = 0;j < time.list.length; j++) { %>
+            <ul class="<%= queryTime==time.list[j]?'on' : '' %>" t="<%= time.list[j] %>">
+                <% if (timeType==1) { %>
+                <li><%= queryTime==time.list[j]?(parseInt(time.list[j].substr(5, 2))) + '月' : '&nbsp;' %></li>
+                <% } %>
+                <% if (timeType!=1) { %>
+                <li>&nbsp;</li>
+                <% } %>
+                <li><%= timeType==1?parseInt(time.list[j].substr(8)):parseInt(time.list[j].substr(5)) %><%= timeType==1?'日':timeType==2?'周':'月' %></li>
+            </ul>
+            <% } %>
+            <% } %>
+        </div>
+    </div>
+    <div class="testing_content KPI_content" id="kpidetaillist_content">
+        <div class="clearfix">
+            <% for (var i = 0;i < kpiDetailDatas.length; i++) { %>
+            <% var kpiDetail = kpiDetailDatas[i] %>
+            <div class="amount_content" style="margin:0"><span class="amount_text"><%= kpiDetail.total %></span></div>
+            <div class="amount_main clearfix">
+                <ul>
+                    <li>最大：<%= kpiDetail.max.k %></li>
+                    <li><%= kpiDetail.max.v %></li>
+                </ul>
+                <ul>
+                    <li>最小：<%= kpiDetail.min.k %></li>
+                    <li><%= kpiDetail.min.v %></li>
+                </ul>
+                <ul>
+                    <li><%= kpiDetail.rate.k %></li>
+                    <li><%= kpiDetail.rate.v %></li>
+                </ul>
+            </div>
+            <% } %>
+            <div class="clearfix"><div id="kpiDayLineDiv" style="width: 100%;height:200px;"></div>
+                <table class="tab_main KPI_tab" style="margin-bottom:5px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr><th scope='col'>属地</th><th scope='col'>数值</th><th scope='col'>环比</th></tr>
+                    <% for (var i = 0;i < kpiDetailDatas.length; i++) { %>
+                    <% var kpiDetail = kpiDetailDatas[i] %>
+                    <% for (var j = 0;j < kpiDetail.list.length; j++) { %>
+                    <% var data = kpiDetail.list[j] %>
+                    <tr><td><%= data.k %></td><td><%= data.v %></td><td><%= data.r %></td></tr>
+                    <% } %>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a class="home"  href="#modules/home/home/goModule"> <p></p> 首页</a>
+            </li>
+            <li>
+                <a class="dy"  href="#modules/subscribe/subscribe/goModule"> <p></p> 订阅</a>
+            </li>
+            <li>
+                <a class="zs"  href="#modules/helper/helper/goModule"> <p></p> 助手</a>
+            </li>
+            <li>
+                <a class="me"  href="#modules/my/my/goModule"> <p></p> 我的</a>
+            </li>
+        </ul>
+    </footer>
+</div>

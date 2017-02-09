@@ -1,0 +1,71 @@
+<div data-role=content dom-cache="true">
+    <header class="header"><a href="javascript:history.go(-1)" class="back_btn"></a>KPI指数</header>
+    <div class="content kpi_list_bg">
+        <div class="kpi_list_left">
+            <div class="main">
+                <ul id="leftUL">
+                    <% for (var i = 0;i < groupDatas.length; i++) { %>
+                    <% var data=groupDatas[i]; %>
+                    <% var colorArr = ["red","org","green","purple"]; %>
+                        <li class="<%= colorArr[i] %>" gid="<%= data.id %>"><%= data.name %></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="kpi_list_right">
+            <div class="main">
+                <ul id="rightUL">
+                    <% for (var i = 0;i < groupDatas.length; i++) { %>
+                    <% var data=groupDatas[i]; %>
+                    <% for (var j = 0;j < data.listKpi.length;j++) { %>
+                    <% var kpi=data.listKpi[j]; %>
+                    <li style="display: <%= i==0?'block':'none' %>;" kid="<%= kpi.id %>" gid="<%= data.id %>" kind="<%= kpi.kind %>">
+                        <a class="gz_span" kid="<%= kpi.id %>" kname="<%= kpi.name %>" kind="<%= kpi.kind %>">
+                            <img src="images/<%= kpi.icon %>"/><%= kpi.name %>
+                        </a>
+                        <% if(kpi.sid != 0) { %>
+                        <div class='gz_ico'></div>
+                        <% } %>
+                        <% if(kpi.sid == 0) { %>
+                        <div class='gz_btn'></div>
+                        <% } %>
+
+                    </li>
+                    <% } %>
+                    <% } %>
+                    <!-- <li>HGU终端用户数
+                      <div class="gz_btn"></div>
+                    </li>
+                    <li>语音业务数
+                      <div class="gz_ico"></div>
+                    </li>
+                    <li>IPTV业务用户数
+                      <div class="gz_btn"></div>
+                    </li>
+                    <li>宽带业务用户数
+                      <div class="gz_btn"></div>
+                    </li>
+                    <li>宽带工单成功率
+                      <div class="gz_btn"></div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a class="home"  href="#modules/home/home/goModule"> <p></p> 首页</a>
+            </li>
+            <li>
+                <a class="dy"  href="#modules/subscribe/subscribe/goModule"> <p></p> 订阅</a>
+            </li>
+            <li>
+                <a class="zs"  href="#modules/helper/helper/goModule"> <p></p> 助手</a>
+            </li>
+            <li>
+                <a class="me"  href="#modules/my/my/goModule"> <p></p> 我的</a>
+            </li>
+        </ul>
+    </footer>
+</div>

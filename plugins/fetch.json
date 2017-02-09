@@ -1,0 +1,27 @@
+{
+    "cordova-plugin-crosswalk-webview": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.ailk.portal.plugin.otherauth": {
+        "source": {
+            "type": "local",
+            "path": "plugins_src\\com.ailk.portal.plugin.otherauth"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.borismus.webintent": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Initsogar/cordova-webintent.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

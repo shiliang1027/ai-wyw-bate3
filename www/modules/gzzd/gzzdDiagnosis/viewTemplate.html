@@ -1,0 +1,87 @@
+<div data-role=content id="gzzdDiagnosisPage">
+    <header class="header"><a href="javascript:history.go(-1)" class="back_btn" data-rel="back"></a>HGU故障诊断</header>
+    <form method="post" id="faultdiagnosisform">
+        <div class="content">
+            <div class="main">
+                <ul class="view_tab diagnosis_tab clearfix" id="searchTypeDia">
+                    <li class="on" id="tab1">宽带账号</li>
+                    <li id="tab2">设备SN</li>
+                    <li id="tab3">逻辑ID</li>
+                    <li id="tab4">电话号码</li>
+                </ul>
+                <div class="input_main">
+                    <input id="faultdiagnosisParam" name="" class="px" value="" placeholder="" type="text" data-role="none">
+                    <a class="input_btn" id="faultdiagnosisTesting">检测</a>
+                </div>
+                <div class="infoDivClass" id="infoDIv">
+                    <h4 class="info_title">终端信息：</h4>
+                    <table class="tab_main" style="margin-bottom:5px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>宽带账号</td>
+                            <td><div id="broadbandAccount"></div></td>
+                        </tr>
+                        <tr>
+                            <td>逻辑ID</td>
+                            <td><div id="logicId"></div></td>
+                        </tr>
+                        <tr>
+                            <td>终端厂商</td>
+                            <td><div id="terminalManufacturers"></div></td>
+                        </tr>
+                        <tr>
+                            <td>软件版本</td>
+                            <td><div id="softwareVersion"></div></td>
+                        </tr>
+                        <tr>
+                            <td>硬件版本</td>
+                            <td><div id="hardwareVersion"></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="info_title">业务信息-宽带上网：</h4>
+                    <table class="tab_main" style="margin-bottom:5px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>宽带PVC/VLAN</td>
+                            <td><div id="pvcRvlan"></div></td>
+                        </tr>
+                        <tr>
+                            <td>宽带绑定端口</td>
+                            <td><div id="bindPort"></div></td>
+                        </tr>
+                        <tr>
+                            <td>语音PVC/VLAN</td>
+                            <td><div id="connectStatus"></div></td>
+                        </tr>
+                        <tr>
+                            <td>语音端口</td>
+                            <td><div id="registratStatus"></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="window">
+        <div class="wtitle"></div>
+        <div class="win_content clearfix" id="popWin"></div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a class="home"  href="#modules/home/home/goModule">
+                <p></p>
+                首页</a></li>
+            <li><a class="dy"  href="#modules/subscribe/subscribe/goModule">
+                <p></p>
+                订阅</a></li>
+            <li><a class="zs"  href="#modules/helper/helper/goModule">
+                <p></p>
+                助手</a></li>
+            <li><a class="me"  href="#modules/my/my/goModule">
+                <p></p>
+                我的</a></li>
+        </ul>
+    </footer>
+</div>

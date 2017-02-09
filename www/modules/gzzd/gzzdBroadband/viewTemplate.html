@@ -1,0 +1,81 @@
+<div data-role=content id="gzzdBroadbandPage">
+    <form method="post" id="gzzdBroadbandform">
+        <header class="header"><a href="javascript:history.go(-1)" class="back_btn" data-rel="back"></a>宽带故障诊断</header>
+        <div class="content">
+            <div>
+                <table class="tab_main" style="margin-bottom:5px" width="100%" border="0" cellspacing="0"
+                       cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td>接入类型</td>
+                        <td><input id="userType" name="" class="px" value="" readonly="readonly" placeholder="请选择接入类型"
+                                   type="text" data-role="none"></td>
+                    </tr>
+                    <tr>
+                        <td>属地</td>
+                        <td><input id="gatherId" name="" class="px" value="" readonly="readonly" placeholder="请选择属地"
+                                   type="text" data-role="none"></td>
+                    </tr>
+                    <tr>
+                        <td>用户账号</td>
+                        <td><input id="checkUser" name="" class="px" value="" placeholder="请输入用户账号" type="text"
+                                   data-role="none"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a class="testing_btn" id="diagnosisSubmit">诊断</a>
+                <!--<li></li>-->
+                <br/>
+
+                <div class="imgDiv" id="imgDiv">
+                    <ul class="testing_loading clearfix">
+                        <li><img src="images/iconfont-wangluo.png"/>
+
+                            <p style="width: 50px">核心网</p></li>
+                        <li class="state"></li>
+                        <li><img src="images/iconfont-fuwuduan.png" alt=""/>
+
+                            <p>OLT</p></li>
+                        <li class="state"></li>
+                        <li><img src="images/iconfont-iconyunfuwuqi.png" alt=""/>
+
+                            <p>ONU</p></li>
+                        <li class="state"></li>
+                        <li><img src="images/iconfont-pc.png" alt=""/>
+
+                            <p>PC</p></li>
+                        <li class="line"></li>
+                    </ul>
+                </div>
+                <!--<li></li>-->
+                <br/>
+
+                <div class="aaadetailsInfoDiv"></div>
+                <div class="detailsInfoDiv"></div>
+
+            </div>
+        </div>
+    </form>
+    <footer class="footer">
+        <ul>
+            <li><a class="home" href="#modules/home/home/goModule">
+                <p></p>
+                首页</a></li>
+            <li><a class="dy" href="#modules/subscribe/subscribe/goModule">
+                <p></p>
+                订阅</a></li>
+            <li><a class="zs" href="#modules/helper/helper/goModule">
+                <p></p>
+                助手</a></li>
+            <li><a class="me" href="#modules/my/my/goModule">
+                <p></p>
+                我的</a></li>
+        </ul>
+    </footer>
+    <!--<div class="overlay"></div>-->
+    <div class="window">
+        <div class="wtitle"></div>
+        <div class="win_content clearfix" id="popWin">
+        </div>
+    </div>
+</div>

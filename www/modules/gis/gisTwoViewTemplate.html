@@ -1,0 +1,105 @@
+<div data-role=content>
+    <header class="header"><a href="javascript:history.go(-1)" class="back_btn"></a>基站分布</header>
+    <div class="content">
+        <div class="search_map">
+            <div class="input_search_map">
+                <input data-role="none" type="text" placeholder="搜基站、OLT" id="search_map">
+                <a class="search_map_btn" id="search_map_btn">搜索</a>
+            </div>
+            <div class="search_drop_down" id="search_drop_down" style="height:0px;">
+            </div>
+        </div>
+        <div class="fbg">
+            <a class="ranking" type="0">排名</a>
+            <a class="ranking base_station <%= type=='1'?'active':'' %>" type="1">基站</a>
+            <a class="ranking broken_station <%= type=='2'?'active':'' %>" type="2">断站</a>
+            <a class="ranking olt <%= type=='3'?'active':'' %>" type="3">OLT</a>
+            <a class ="olt_break <%= type=='4'?'active':'' %>" type="4"><span class="font-red">O</span><span class="font-blue">L</span><span class="font-red">T</span><br>故障</a>
+            <a class="ranking set" type="5">设置</a>
+            <!--<a class="ranking" type="6">离线地图</a>-->
+        </div>
+        <input data-role="none" type="hidden" id="tableId">
+        <input data-role="none" type="hidden" id="tagId">
+        <!--<div class="zoom"><a href="#"><img src="images/big_map.png" alt=""/></a>-->
+        <!--<div class="line"></div>-->
+        <!--<a href="#"><img src="images/small_map.png" alt=""/></a></div>-->
+        <!--<div class="location"><a href="#"><img src="images/location.png" alt=""/></a></div>-->
+        <div style="width:100%;height:100%;" id="mapContainer"></div>
+        <!-- 基站弹窗-->
+        <!-- 设置弹窗-->
+        <div class="popup_map popup_bottom" id="base_station_main" style="display:none"><a class="close_map"></a>
+            <p class="set-ttl">基站</p>
+            <ul>
+                <li class="checkboxList" id="checkboxfor1">
+                    <div class="checkboxA checkbox1">
+                        <input data-role="none" name="basetype" id="checkbox1" type="checkbox" sign="<%= selectG.s2G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.s2G.value %>">
+
+                        <!-- <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="checkbox1" data-role="none" class="<%= selectG.s2G.selected?'on':'' %>"><img src="images/2G.png"/><span>2G</span></label>
+                </li>
+                <li class="checkboxList" id="checkboxfor2">
+                    <div class="checkboxA checkbox2">
+                        <input data-role="none" name="basetype" id="checkbox2" type="checkbox" sign="<%= selectG.s3G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.s3G.value %>">
+
+                        <!-- <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="checkbox2" data-role="none"  class="<%= selectG.s3G.selected?'on':'' %>"><img src="images/3G.png"/><span>3G</span></label>
+                </li>
+                <li class="checkboxList" id="checkboxfor3">
+                    <div class="checkboxA checkbox3">
+                        <input data-role="none" name="basetype" id="checkbox3" type="checkbox" sign="<%= selectG.s4G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.s4G.value %>">
+
+                        <!-- <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="checkbox3" data-role="none" class="<%= selectG.s4G.selected?'on':'' %>"><img src="images/4G.png"/><span>4G</span></label>
+                </li>
+            </ul>
+            <p class="set-ttl">断站</p>
+            <ul>
+                <li  class="checkboxList" id="dz-checkboxfor1">
+                    <div class="checkboxA checkbox1">
+                        <input data-role="none" name="dztype" id="dz-checkbox1" type="checkbox" sign="<%= selectG.d2G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.d2G.value %>">
+
+                        <!-- <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="dz-checkbox1" data-role="none" class="<%= selectG.d2G.selected?'on':'' %>"><img src="images/2G.png"/><span>2G</span></label>
+                </li>
+                <li class="checkboxList" id="dz-checkboxfor2">
+                    <div class="checkboxA checkbox2">
+                        <input data-role="none" name="dztype" id="dz-checkbox2" type="checkbox" sign="<%= selectG.d3G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.d3G.value %>">
+
+                       <!--  <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="dz-checkbox2" data-role="none" class="<%= selectG.d3G.selected?'on':'' %>"><img src="images/3G.png"/><span>3G</span></label>
+                </li>
+                <li class="checkboxList" id="dz-checkboxfor3">
+                    <div class="checkboxA checkbox3">
+                        <input data-role="none" name="dztype" id="dz-checkbox3" type="checkbox" sign="<%= selectG.d4G.selected?'checked':'unchecked' %>" class="check_switch" value="<%= selectG.d4G.value %>">
+
+                        <!-- <div class="checkboxA_bg"></div> -->
+                    </div>
+                    <label for="dz-checkbox3" data-role="none" class="<%= selectG.d4G.selected?'on':'' %>"><img src="images/4G.png"/><span>4G</span></label>
+                </li>
+            </ul>
+        </div>
+        <div class="mask_map hide"></div>
+        <div class="mask_map2 hide "></div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a class="home"  href="#modules/home/home/goModule">
+                <p></p>
+                首页</a></li>
+            <li><a class="dy"  href="#modules/subscribe/subscribe/goModule">
+                <p></p>
+                订阅</a></li>
+            <li><a class="zs"  href="#modules/helper/helper/goModule">
+                <p></p>
+                助手</a></li>
+            <li><a class="me"  href="#modules/my/my/goModule">
+                <p></p>
+                我的</a></li>
+        </ul>
+    </footer>
+</div>
